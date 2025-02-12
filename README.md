@@ -2,6 +2,8 @@ PASOS PARA INICIALIZAR EL MÓDULO AL MOMENTO DE PRESENTARLO (LEER TODOS LOS PASO
 
 PASO N1 ---------------------------------------------------------
 
+Abre la terminar en el projecto Ejecuta el comando "composer install".
+
 Abre el XAMPP y activa los Serrvicios apache y mysql.
 
 Despúes configure su nuevo archivo ".env" correctamente en el puerto 3306 y el nombre de la base de datos que es "database_tickets" con el gestor "Mysql".
@@ -36,4 +38,4 @@ Aplica el comando "composer run dev" o "php artisan serve" para inciar el proyec
 
 NOTA --------------------------------------------------------------------
 
-Si al momento de levantar el servidor existe un error de depencias aplica estos comandos "php artisan config:clear" y despúes "composer install". Si esto no funciona busca información en internet sobre el error y como solucioanrlo.
+Si al momento de levantar el servidor existe un error de depencias aplica estos comandos "php artisan config:clear". Si esto no funciona busca información en internet sobre el error y como solucioanrlo.
