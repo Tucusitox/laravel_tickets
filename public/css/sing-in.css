@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+  --color-primary: #007bff;
+  --color-success: #198754;
+}
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  background-color: var(--bs-dark-bg-subtle);
+  color: var(--bs-emphasis-color);
+  transition: all 0.35s ease-in-out;
+}
+
+.form-signin {
+
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  border-radius: 10px;
+  margin: auto;
+
+  border-top: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+  
+  border-right: 3px solid var(--color-success);
+  border-bottom: 3px solid var(--color-success);
+}
+
+.form-signin .IconForm{
+  font-size: 70px;
+  background: linear-gradient(-45deg, var(--color-success) 50%, var(--color-primary) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px){
+  .form-signin{
+    margin: 100px auto;
+    max-width: 350px;
+  }
+  .form-signin a{
+    font-size: 13px;
+  }
+}
+
+.form-signin img{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.form-signin input{
+
+  transition: all 0.2s ease-in-out;
+
+  border-top: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+  
+  border-right: 3px solid var(--color-success);
+  border-bottom: 3px solid var(--color-success);
+}
+
+.form-signin label{
+  background: linear-gradient(to right, var(--color-success) 50%, var(--color-primary) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-signin label::after{
+  background: linear-gradient(to right, var(--color-success) 50%, var(--color-primary) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-floating i {
+  position: absolute; 
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%); 
+  cursor: pointer;
+
+  background: linear-gradient(-45deg, var(--color-success) 50%, var(--color-primary) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-signin button {
+  width: 100%;
+  padding: 10px 0px;
+
+  border-top: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+  
+  border-right: 3px solid var(--color-success);
+  border-bottom: 3px solid var(--color-success);
+}
+
+.form-signin button b {
+  background: linear-gradient(to right, var(--color-success) 50%, var(--color-primary) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-signin button:hover {
+
+  border-top: 3px solid var(--color-success);
+  border-left: 3px solid var(--color-success);
+  
+  border-right: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
+
+  background: linear-gradient(-45deg, var(--color-success) 50%, var(--color-primary) 50%);
+
+  transition: all 0.3s ease-in-out;
+}
+
+html[data-bs-theme="dark"] .change-theme .bxs-moon {
+  display: none;
+}
+
+html[data-bs-theme="light"] .change-theme .bxs-sun {
+  display: none;
+}
+
+.change-theme{
+  transition: 0.5s ease;
+}
+
+.change-theme:hover{
+  transform: scale(1.3);
+  transition: 0.5s ease;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-container a {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  transition: 0.3s linear;
+
+  background: linear-gradient(to right, var(--color-success) 50%, var(--color-primary) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-container a::before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background-image: linear-gradient(to right, var(--color-success) 50%, var(--color-primary) 50%);
+  text-shadow: 0 0 10px var(--color-success);
+  transform: translateX(-50%);
+  transition: 0.33s linear;
+}
+.nav-container a:hover::before {
+  width: 100%;
+}
+.nav-container a:hover {
+  text-shadow: 0 0 10px var(--color-success);
+}
+

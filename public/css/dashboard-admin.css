@@ -1,0 +1,71 @@
+/* STYLES GENERALS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root{
+    --color-primary: #007bff;
+    --color-success: #198754;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bs-dark-bg-subtle);
+    overflow-y: scroll;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 6.5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--color-primary) 50%, var(--color-success) 50%);
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.275rem;
+    color: var(--bs-emphasis-color);
+}
+
+/* MAIN CONTAINER */
+.main { 
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--bs-dark-bg-subtle);
+    padding-top: 70px;
+}
+
+.marginDefault{
+    margin-left: 264px;
+}
+
+/* DARK MODE */
+
+html[data-bs-theme="dark"] .change-theme .bxs-moon {
+    display: none;
+}
+
+html[data-bs-theme="light"] .change-theme .bxs-sun {
+    display: none;
+}

@@ -1,0 +1,180 @@
+/* CARDS STYLES */
+.card {
+  color: var(--bs-emphasis-color);
+
+  border-top: 2px solid var(--color-primary);
+  border-left: 2px solid var(--color-primary);
+
+  border-right: 2px solid var(--color-success);
+  border-bottom: 2px solid var(--color-success);
+
+  box-shadow: 0 0 0.875rem 0 rgba(34, 46, 60, 0.05);
+  margin-bottom: 10px;
+}
+.nav-link{
+  transition: all 0.35s ease-in-out;
+}
+.nav-link:hover{
+  color: var(--color-primary);
+  transform: scale(1.1);
+  transition: all 0.35s ease-in-out;
+}
+.table {
+  color: var(--bs-emphasis-color);
+}
+
+.table thead tr th{
+  color: var(--color-primary);
+}
+
+.illustration {
+  background-color: var(--bs-primary-bg-subtle);
+  color: var(--bs-emphasis-color);
+}
+
+.illustration-img {
+  max-width: 150px;
+  width: 100%;
+}
+
+/* FORMULARIOS DENTRO DE CARDS */
+.form-signin input {
+  transition: all 0.2s ease-in-out;
+
+  border-top: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+
+  border-right: 3px solid var(--color-success);
+  border-bottom: 3px solid var(--color-success);
+}
+
+.form-signin label {
+  background: linear-gradient(
+    to right,
+    var(--color-success) 50%,
+    var(--color-primary) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-signin label::after {
+  background: linear-gradient(
+    to right,
+    var(--color-success) 50%,
+    var(--color-primary) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.form-signin textarea {
+  transition: all 0.2s ease-in-out;
+
+  border-top: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+
+  border-right: 3px solid var(--color-success);
+  border-bottom: 3px solid var(--color-success);
+}
+
+.form-signin select {
+  transition: all 0.2s ease-in-out;
+
+  border-top: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+
+  border-right: 3px solid var(--color-success);
+  border-bottom: 3px solid var(--color-success);
+}
+
+.form-floating i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  background: linear-gradient(
+    -45deg,
+    var(--color-success) 50%,
+    var(--color-primary) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-signin button {
+  width: 100%;
+  padding: 10px 0px;
+
+  border-top: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+
+  border-right: 3px solid var(--color-success);
+  border-bottom: 3px solid var(--color-success);
+}
+
+.form-signin button b {
+  background: linear-gradient(
+    to right,
+    var(--color-success) 50%,
+    var(--color-primary) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-signin button:hover {
+  border-top: 3px solid var(--color-success);
+  border-left: 3px solid var(--color-success);
+
+  border-right: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
+
+  background: linear-gradient(
+    -45deg,
+    var(--color-success) 50%,
+    var(--color-primary) 50%
+  );
+
+  transition: all 0.3s ease-in-out;
+}
+
+.card-details a {
+  width: 100%;
+  padding: 10px 0px;
+
+  border-top: 3px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
+
+  border-right: 3px solid var(--color-success);
+  border-bottom: 3px solid var(--color-success);
+}
+
+.card-details a b {
+  background: linear-gradient(
+    to right,
+    var(--color-success) 50%,
+    var(--color-primary) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-details a:hover {
+  border-top: 3px solid var(--color-success);
+  border-left: 3px solid var(--color-success);
+
+  border-right: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
+
+  background: linear-gradient(
+    -45deg,
+    var(--color-success) 50%,
+    var(--color-primary) 50%
+  );
+
+  transition: all 0.3s ease-in-out;
+}
