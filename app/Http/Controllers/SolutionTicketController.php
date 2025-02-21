@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use DateTime;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\EmailController;
 
 class SolutionTicketController
 {
@@ -29,6 +30,7 @@ class SolutionTicketController
         $this->calculatorSolution($id_request);
 
         $UserName = User::select('user_name')->where('user_id', Auth::id())->first();
+        $EmailClient = TicketRequest::find($id_request);
 
         // GUARDAMOS LA SOLUCION EL LA BASE DE DATOS
         RequestSolution::insert([
@@ -40,6 +42,11 @@ class SolutionTicketController
                 'solution_time' => $this->SolutionTime,
             ],
         ]);
+
+        // EVIAMOS NOTIFICACION DE SOLUCIONADO AL CORREO DEL CLIENTE
+        $mensaje = "Estimado usuario su solicitud ha sido solucionada exitosamente.";
+        $EmailController = new EmailController;
+        $EmailController->emailNotify(true,$EmailClient->request_applicantEmail,$mensaje);
 
         return redirect()->route('details.tickets', ['id_request' => $id_request])->with('success', 'Ticket solucionado con éxito');
     }

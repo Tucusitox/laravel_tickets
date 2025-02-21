@@ -116,8 +116,11 @@ class AsignacionController
         $user->notify(new UserNotification($requestCode));
 
         // ENVIAR NOTIFICACION POR CORREO
+        $mensaje = "Estimado usuario su solicitud sera atentida lo más pronto posible. 
+        Se le notifcara por este medio cuando este solucionada";
+
         $EmailController = new EmailController;
-        $EmailController->emailNotify(true,$destinatario);
+        $EmailController->emailNotify(true,$destinatario,$mensaje);
         var_dump('notificacion enviada');
     }
 }

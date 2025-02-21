@@ -10,6 +10,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class User
@@ -37,7 +38,7 @@ use Illuminate\Notifications\Notifiable;
  */
 class User extends Authenticatable
 {
-	use Notifiable;
+	use Notifiable, SoftDeletes;
 	
 	protected $table = 'users';
 	protected $primaryKey = 'user_id';

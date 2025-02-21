@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('password', 100);
             $table->date('user_dateOfBirth');
             $table->string('user_status', 100);
+            $table->softDeletes();
         });
 
         Schema::create('sessions', function (Blueprint $table) {

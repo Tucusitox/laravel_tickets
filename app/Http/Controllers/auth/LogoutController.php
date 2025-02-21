@@ -46,7 +46,7 @@ class LogoutController
         session()->regenerateToken();
     }
 
-    // METODO PARA SOLO CERRAR SESION EN COMPONENTES LIVEWIRE (ADMINISTRADOR)
+    // METODO PARA CERRAR SESION DE UN USUARIO DESDE UNA VISTA (ADMINISTRADOR)
     public function closeSession($user_id)
     {
         // CERRAR LA SESION DEL USUARIO BLOCKEADO

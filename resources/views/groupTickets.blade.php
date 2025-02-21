@@ -75,14 +75,14 @@
                                             class="btn btn-warning me-2" title="Detalles">
                                             <i class='bx bx-detail'></i>
                                         </a>
-                                        <a href="{{ route('ticket.follow', $item->fk_request) }}"
-                                            class="btn btn-info me-2" title="Seguimiento">
-                                            <i class='bx bx-edit'></i>
-                                        </a>
                                         @if ($item->status_name !== "Solucionado")
+                                            <a href="{{ route('ticket.follow', $item->fk_request) }}"
+                                                class="btn btn-info me-2" title="Seguimiento">
+                                                <i class='bx bx-edit'></i>
+                                            </a>
                                             <a href="{{ route('ticket.solution', $item->fk_request) }}"
                                                 class="btn btn-success" title="Solucionar">
-                                                <i class='bx bx-check'></i>
+                                                <i class='bx bx-check-circle'></i>
                                             </a>
                                         @endif
                                     </td>

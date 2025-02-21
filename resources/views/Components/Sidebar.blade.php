@@ -12,7 +12,7 @@
     <div class="h-100">
         <div class="sidebar-logo">
             <div class="d-flex align-items-center">
-                <img src="{{asset('img/logo-megaSoftt.png')}}" class="img-fluid me-2" style="width: 50px; height: 50px;">
+                <img src="{{asset('img/logo-m.png')}}" class="img-fluid me-2" style="width: 50px; height: 50px;">
                 <a href="{{route('dashboard')}}">SGPI</a>
             </div>
             <!-- BTN CLOSE SIDEBAR RESPONSIVE -->
@@ -74,37 +74,15 @@
                     </a>
                     <ul id="gestionUsers" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
+                            <a href="{{route('managment.users')}}" class="sidebar-link">
                                 <i class='bx bx-circle'></i>
                                 Usuarios
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
+                            <a href="{{ route('managment.sesions') }}" class="sidebar-link">
                                 <i class='bx bx-circle'></i>
                                 Sesiones de usuarios
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="sidebar-item">
-                    <a class="sidebar-link collapsed" data-bs-target="#estadisticas" data-bs-toggle="collapse"
-                        aria-expanded="false">
-                        <i class='bx bx-objects-vertical-bottom'></i>
-                        Estadísticas
-                    </a>
-                    <ul id="estadisticas" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
-                                <i class='bx bx-circle'></i>
-                                Generales
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
-                                <i class='bx bx-circle'></i>
-                                Específicas
                             </a>
                         </li>
                     </ul>

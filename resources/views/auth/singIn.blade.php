@@ -7,8 +7,8 @@
         @csrf
 
         <div class="text-center">
-            <img class="img-fluid" src="img/logo-megaSoftt.png" />
-            <h3 class="text-success my-4"><b>Iniciar</b> <b class="text-primary">sesión</b></h3>
+            {{-- <img class="img-fluid" src="{{asset('img/logo-m.png')}}"/> --}}
+            <h1 class="text-success mb-4"><b>Iniciar</b> <b class="text-primary">sesión</b></h1>
         </div>
 
         {{-- ALERTA PARA MENSAJES DE EXITO --}}
@@ -38,7 +38,8 @@
         </div>
 
     </form>
-
+    
+    {{-- MODAL PARA RECUPERAR LA CONTRASEÑA --}}
     <x-ModalRecoverPassword />
 
 

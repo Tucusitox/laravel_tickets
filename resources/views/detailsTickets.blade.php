@@ -46,7 +46,7 @@
                                 </a>
                                 <a href="{{ route('ticket.solution', $TicketData->first()->id_request) }}" 
                                     class="btn btn-success" title="Dar solución">
-                                    <i class='bx bx-check'></i>
+                                    <i class='bx bx-check-circle'></i>
                                 </a>
                             </div>                                           
                         @endif

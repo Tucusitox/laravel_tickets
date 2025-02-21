@@ -28,7 +28,7 @@
                             <div class="col-lg-6 my-2 card-details text-end" id="buttonSaveFollow">
 
                                 <button type="submit" class="btn me-2" style="width: 30%">
-                                    <i class='bx bx-check'></i>
+                                    <i class='bx bx-check-circle'></i>
                                     Solucionar
                                 </button>
 

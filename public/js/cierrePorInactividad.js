@@ -8,8 +8,8 @@ function timerIncrement() {
 
     // SI EL TIEMPO DE INACTIVIDAD ES MAYOR A N CANTIDAD DE TIEMPO
     if (inactivityTime > 1200) { //-> 20 MINUTOS
-        const modal = document.getElementById('modalPorInactividad');
-        modal.classList.remove("d-none");
+        const modalInactividad = new bootstrap.Modal(document.getElementById('modalPorInactividad'));
+        modalInactividad.show();
         bolean = true;
     }
 };
@@ -40,6 +40,6 @@ function invocandcion() {
 
 // ESCUCHAR EVENTOS DE INTERACCION CON EL USUARIO
 //document.onkeydown = invocandcion; // Al presionar una tecla
-document.onclick = invocandcion; // Al hacer clik en la pantalla
+//document.onclick = invocandcion; // Al hacer clik en la pantalla
 //document.onscroll = invocandcion; // Al hacer scroll en la pantalla
 

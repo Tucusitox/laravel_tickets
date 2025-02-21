@@ -60,7 +60,7 @@
 
                         <div class="form-floating mb-3 bg-body-tertiary">
                             <input type="password" class="form-control" id="clave-login" placeholder="Password" name="newPassword"/>
-                            <label for="clave-login">Nueva ontraseña</label>
+                            <label for="clave-login">Nueva contraseña</label>
                             <i onclick="ocultarContraseña('clave-login', 'loginClave-Icono')" id="loginClave-Icono"
                                 class="bx bx-low-vision fs-4"></i>
                         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Request as TicketRequest;
 use App\Models\FollowsRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -32,6 +33,12 @@ class FollowTicketController
             'follow_description' => $request->post('FollowDescription'),
             'date_register' => now()->setTimezone('America/Caracas'),
         ]);
+
+        // EVIAMOS NOTIFICACION DE SEGUIMIENTO AL CORREO DEL CLIENTE
+        $EmailClient = TicketRequest::find($id_request);
+        $mensaje = "Estimado usuario su solicitud se le está dando seguimiento, por favor espere nuestra solución.";
+        $EmailController = new EmailController;
+        $EmailController->emailNotify(true,$EmailClient->request_applicantEmail,$mensaje);
 
         return redirect()->route('details.tickets', ['id_request' => $id_request])->with('success','Seguimiento realizado con éxito');
     }
