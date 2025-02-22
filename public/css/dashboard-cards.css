@@ -26,6 +26,10 @@
 .table thead tr th{
   color: var(--color-primary);
 }
+.table tbody tr:hover td {
+  cursor: pointer;
+  background: gray;
+}
 
 .illustration {
   background-color: var(--bs-primary-bg-subtle);

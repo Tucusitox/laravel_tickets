@@ -1,7 +1,6 @@
 /* ESTILOS PARA SWEET-ALERT2 */
 .swal2-modal {
-    background: transparent;
-    backdrop-filter: blur(5rem);
+    background: var(--bs-dark-bg-subtle);
     border: 2px solid #dc3545;
     padding: 10px;
 }

@@ -6,8 +6,6 @@
     <form action="{{ route('new.password', $id_user) }}" method="POST" id="formLogin">
         @csrf
         <div class="container text-center">
-            <img class="mb-4 rounded" src="{{ asset('img/logo-megaSoftt.png') }}" alt="" width="100"
-                height="100">
             <h5 class=" text-center mb-3">
                 ¡Ingrese el código de recuperación enviado a su correo electrónico!
             </h5>

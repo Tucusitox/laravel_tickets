@@ -22,7 +22,10 @@
                     <div class="card-tools row justify-content-between align-items-center">
 
                         <div class="col-lg-6 my-2">
-                            <h4 class="card-title"><b>Tickets asignados a mi -> {{ $Tickets->count() }}</b></h4>
+                            <h4 class="card-title">
+                                <b class="text-success">{{ $Tickets->count() }}</b> 
+                                <b class="text-primary">Tickets asignados</b>
+                            </h4>
                         </div>
 
                         <div class="d-flex justify-content-end col-lg-6 my-2">

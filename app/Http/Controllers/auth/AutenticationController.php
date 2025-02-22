@@ -30,7 +30,15 @@ class AutenticationController
             return redirect()->route('login')->withErrors('Este usuario se encuentra bloqueado del sistema');
         }
 
-        // CASO 3: VALIDAR SI YA TIENE UNA SESION ACTIVA
+        // CASO 3: EL USUARIO NO ESTA VERIFICADO AUN
+        if (Auth::user()->user_status == 'no verificado') {
+            $UserId = Auth::id();
+            $LogoutController = new LogoutController;
+            $LogoutController->logoutAndRedirect();
+            return redirect()->route('user.verification', ['user_id' => $UserId]);
+        }
+
+        // CASO 4: VALIDAR SI YA TIENE UNA SESION ACTIVA
         $SessionExist = SessionsUser::where('fk_user', Auth::id())
         ->where('session_status', 'activo')
         ->exists();

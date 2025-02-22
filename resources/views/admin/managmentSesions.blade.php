@@ -5,7 +5,8 @@
     use Carbon\Carbon;
     use App\Models\SessionsUser;
     if (!$bolean) {
-        $AllSessions = SessionsUser::join('users', 'sessions_users.fk_user', '=', 'users.user_id')->get();
+        $AllSessions = SessionsUser::join('users', 'sessions_users.fk_user', '=', 'users.user_id')
+                        ->orderBy('session_date','desc')->get();
     }
     else {
         $AllSessions = $FindSession;

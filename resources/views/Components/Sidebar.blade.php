@@ -89,14 +89,14 @@
                 </li>
 
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="{{route('user.new')}}" class="sidebar-link">
                         <i class='bx bx-user-plus'></i>
                         Nuevo usuario
                     </a>
                 </li>
 
                 <li class="sidebar-item">
-                    <a href="#" class="sidebar-link">
+                    <a href="{{route('backup.index')}}" class="sidebar-link">
                         <i class='bx bx-save'></i>
                         Respaldo
                     </a>

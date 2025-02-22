@@ -11,7 +11,7 @@ use App\Models\UsersProjectsRequest;
 use Illuminate\Support\Str;
 use App\Notifications\UserNotification;
 use App\Http\Controllers\EmailController;
-
+use Illuminate\Support\Facades\DB;
 
 class AsignacionController
 {
@@ -76,16 +76,17 @@ class AsignacionController
         var_dump("completado");
     }
 
+    // METODO PARA TRAER EL ID DEL USUARIO CONMENOS TICKETS
     private function getIdUser()
-    {
-        $id = UsersProjectsRequest::select('fk_user')
-            ->selectRaw('COUNT(*) as cantidad')
-            ->groupBy('fk_user')
+    {   // TRAR EL ID DEL USUARIO CON MENOS TICKETS
+        $id = User::leftJoin('users_projects_request', 'users.user_id', '=', 'users_projects_request.fk_user')
+            ->select('users.user_id as fk_user', DB::raw('COALESCE(COUNT(users_projects_request.fk_user), 0) as cantidad'))
+            ->groupBy('users.user_id')
             ->having('cantidad', '<', 10)
             ->orderBy('cantidad', 'asc')
             ->limit(1)
             ->first();
-
+        // SI NO SE LO ASIGNAMOS A UN ADMIN
         $idAdmin = User::select('user_id')
             ->join('rols', 'rols.id_rol', '=', 'users.fk_rol')
             ->where('rol_name', 'Administrador')

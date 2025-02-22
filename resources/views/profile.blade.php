@@ -96,9 +96,9 @@
                 </div>
 
                 <div class="form-floating mb-3 bg-body-tertiary">
-                    <input type="number" class="form-control" id="floatingInput" placeholder="12345678"
+                    <input type="number" class="form-control" id="floatingInput1" placeholder="12345678"
                         name="UserIdentification" value="{{ $UserData->first()->user_identification }}" />
-                    <label for="floatingInput">Identificación</label>
+                    <label for="floatingInput1">Identificación</label>
                     <i class='bx bx-id-card fs-4'></i>
                 </div>
 
@@ -111,23 +111,23 @@
                 </div>
 
                 <div class="form-floating mb-3 bg-body-tertiary">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="name" name="UserName"
+                    <input type="text" class="form-control" id="floatingInput2" placeholder="name" name="UserName"
                         value="{{ $UserData->first()->user_name }}" />
-                    <label for="floatingInput">Nombre</label>
+                    <label for="floatingInput2">Nombre</label>
                     <i class='bx bx-rename fs-4'></i>
                 </div>
 
                 <div class="form-floating mb-3 bg-body-tertiary">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="lastname" name="UserLastName"
+                    <input type="text" class="form-control" id="floatingInput3" placeholder="lastname" name="UserLastName"
                         value="{{ $UserData->first()->user_lastName }}" />
-                    <label for="floatingInput">Apellido</label>
+                    <label for="floatingInput3">Apellido</label>
                     <i class='bx bx-rename fs-4'></i>
                 </div>
 
                 <div class="form-floating mb-3 bg-body-tertiary">
                     <input type="date" class="form-control" name="UserDateOfBirth"
                         value="{{ $UserData->first()->user_dateOfBirth->format('Y-m-d') }}" />
-                    <label for="floatingInput">Fecha de nacimiento</label>
+                    <label for="floatingInput4">Fecha de nacimiento</label>
                 </div>
 
                 <button class="btn mb-3" type="submit">

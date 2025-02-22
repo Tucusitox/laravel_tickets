@@ -12,7 +12,7 @@ class EmailController
     // ENIVAR CORREO DE SOLICITUD RECIBIDA, SEGUIMIENTO Y CONFIRMACION DE SOLUCIONADO
     public function emailNotify($cliente, $destinatario, $mensaje)
     {
-        $asunto = "MegaSoft Computación respuesta";
+        $asunto = "MorianSoft Computación mensaje";
         // LAMAMOS A LA CLASE CONSTRUCTORA PARA ENVIAR EL CORREO
         dispatch(new SendEmailJob([
             'asunto' => $asunto,
@@ -27,7 +27,7 @@ class EmailController
     {
         // GENERAR EL CODIGO ALEATORIO Y LOS DATOS A ENVIAR
         $asunto = "Codigo de recuperación";
-        $mensaje = "Estimado usuario recupere su contraseña con el siguiente código:";
+        $mensaje = "Estimado usuario recupere su contraseña con el siguiente código";
         $codigo = strtoupper(Str::random(8));
 
         // ACTUALIZAMOS LA CONTRASEÑA DEL USUARIO
